@@ -3,21 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AllAccess</title>
+    <title>AllAccess — All Your Music. One App.</title>
+    <meta name="description" content="AllAccess brings together Spotify, Apple Music, Tidal, YouTube Music, SoundCloud, and your local files into one beautiful app.">
+    <link rel="canonical" href="https://hzsl777.github.io/allaccess-site/">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Roboto, sans-serif;
             background: #0A0A0A;
             color: #fff;
             min-height: 100vh;
+            overflow-x: hidden;
+        }
+        a { color: #9B4DCA; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+
+        /* Hero */
+        .hero {
             display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
-        }
-        .container {
+            min-height: 100vh;
             text-align: center;
-            padding: 40px 24px;
+            padding: 60px 24px;
+            background: radial-gradient(ellipse at 50% 0%, rgba(107,45,91,0.25) 0%, transparent 60%);
         }
         .icon {
             width: 120px;
@@ -27,40 +37,181 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            margin: 0 auto 32px;
+            margin-bottom: 32px;
             font-size: 48px;
+            box-shadow: 0 20px 60px rgba(107,45,91,0.4);
         }
         h1 {
-            font-size: 36px;
-            font-weight: 700;
-            margin-bottom: 12px;
-            background: linear-gradient(135deg, #6B2D5B, #9B4DCA);
+            font-size: 48px;
+            font-weight: 800;
+            margin-bottom: 16px;
+            background: linear-gradient(135deg, #9B4DCA, #6B2D5B);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
-        p {
-            font-size: 18px;
+        .tagline {
+            font-size: 20px;
             color: #A0A0A0;
-            max-width: 400px;
-            line-height: 1.5;
+            max-width: 500px;
+            line-height: 1.6;
+            margin-bottom: 40px;
         }
         .badge {
             display: inline-block;
-            margin-top: 32px;
-            padding: 12px 32px;
-            border: 1px solid rgba(107, 45, 91, 0.5);
-            border-radius: 24px;
+            padding: 14px 36px;
+            border: 1px solid rgba(107,45,91,0.5);
+            border-radius: 28px;
             color: #A0A0A0;
+            font-size: 15px;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+        }
+
+        /* Services */
+        .services {
+            padding: 80px 24px;
+            text-align: center;
+            background: #0F0F0F;
+        }
+        .services h2 {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 40px;
+            color: #E0E0E0;
+        }
+        .service-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 16px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .service-chip {
+            padding: 10px 24px;
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 20px;
+            font-size: 15px;
+            color: #C0C0C0;
+            font-weight: 500;
+        }
+
+        /* Features */
+        .features {
+            padding: 80px 24px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .features h2 {
+            font-size: 28px;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 48px;
+            color: #E0E0E0;
+        }
+        .feature-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 32px;
+        }
+        .feature {
+            padding: 24px;
+            background: rgba(255,255,255,0.03);
+            border: 1px solid rgba(255,255,255,0.06);
+            border-radius: 16px;
+        }
+        .feature h3 {
+            font-size: 17px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #E0E0E0;
+        }
+        .feature p {
             font-size: 14px;
+            color: #808080;
+            line-height: 1.5;
+        }
+
+        /* Footer */
+        footer {
+            padding: 40px 24px;
+            text-align: center;
+            border-top: 1px solid rgba(255,255,255,0.06);
+            color: #606060;
+            font-size: 13px;
+        }
+        footer a {
+            color: #808080;
+            margin: 0 12px;
+        }
+        footer .links {
+            margin-bottom: 16px;
+        }
+
+        @media (max-width: 600px) {
+            h1 { font-size: 36px; }
+            .tagline { font-size: 17px; }
         }
     </style>
 </head>
 <body>
-    <div class="container">
+    <section class="hero">
         <div class="icon">🎵</div>
         <h1>AllAccess</h1>
-        <p>All your music. Every service. One app.</p>
-        <div class="badge">Coming Soon</div>
-    </div>
+        <p class="tagline">All your music. Every service. One app. Stream from Spotify, Apple Music, Tidal, YouTube Music, SoundCloud, and your local library — unified.</p>
+        <div class="badge">Coming Soon to iOS</div>
+    </section>
+
+    <section class="services">
+        <h2>Every Service, Connected</h2>
+        <div class="service-grid">
+            <span class="service-chip">Spotify</span>
+            <span class="service-chip">Apple Music</span>
+            <span class="service-chip">Tidal</span>
+            <span class="service-chip">YouTube Music</span>
+            <span class="service-chip">SoundCloud</span>
+            <span class="service-chip">Local Files</span>
+        </div>
+    </section>
+
+    <section class="features">
+        <h2>Built for Music Lovers</h2>
+        <div class="feature-list">
+            <div class="feature">
+                <h3>Unified Library</h3>
+                <p>All your songs, playlists, and albums from every service in one place.</p>
+            </div>
+            <div class="feature">
+                <h3>Synced Lyrics</h3>
+                <p>Real-time lyrics that scroll with your music, powered by multiple sources.</p>
+            </div>
+            <div class="feature">
+                <h3>Social Sharing</h3>
+                <p>Share songs with friends, create Blend playlists, and send music DMs.</p>
+            </div>
+            <div class="feature">
+                <h3>CarPlay</h3>
+                <p>Full CarPlay support for safe, hands-free listening on the road.</p>
+            </div>
+            <div class="feature">
+                <h3>P2P Transfer</h3>
+                <p>Send music files directly to nearby friends over local network.</p>
+            </div>
+            <div class="feature">
+                <h3>Smart Dedup</h3>
+                <p>Automatically detects and merges duplicate songs across services.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="links">
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="support.html">Support</a>
+        </div>
+        <p>&copy; 2026 AllAccess. All rights reserved.</p>
+    </footer>
 </body>
 </html>
